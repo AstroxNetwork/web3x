@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Fix `Ethereum.fromHex` regular expression.
+
 ## 1.0.5
 
 - Fix `getBlockInformation` params
