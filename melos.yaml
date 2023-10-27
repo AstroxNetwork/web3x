@@ -23,7 +23,7 @@ scripts:
   analyze:
     exec: dart analyze .
   publish: melos publish --no-dry-run --ignore="*example*" --yes
-  dry-run: melos publish --dry-run --ignore="*example*"
+  dry-run: melos publish --dry-run --ignore="*example*" --yes
 
 ide:
   intellij:

@@ -1,13 +1,14 @@
 include: all_lint_rules.yaml
 analyzer:
   errors:
+    deprecated_member_use: false
+    deprecated_member_use_from_same_package: ignore
     import_of_legacy_library_into_null_safe: ignore
     # Otherwise cause the import of all_lint_rules to warn because of some rules conflicts.
     # We explicitly enabled even conflicting rules and are fixing the conflict
     # in this file
     included_file_warning: ignore
     invalid_annotation_target: false
-
   exclude:
     - packages/**/example/lib/generated_plugin_registrant.dart
     - packages/**/lib/**.g.dart
@@ -30,9 +31,8 @@ linter:
     parameter_assignments: false
     omit_local_variable_types: false
     avoid_equals_and_hash_code_on_mutable_classes: false
-    deprecated_member_use_from_same_package: false
     avoid_multiple_declarations_per_line: false
-    deprecated_member_use: false
+    deprecated_member_use_from_same_package: false
 
     ## currently enabled only for firebase_core
     avoid_dynamic_calls: false
