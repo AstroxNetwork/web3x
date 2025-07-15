@@ -14,10 +14,8 @@ dependencies:
   web3x: ^1.0.1
   built_collection: ^5.1.1
   path: ^1.8.2
-  dart_style: ^2.2.4
-
-dependency_overrides:
-  async: any
+  dart_style: ^3.0.0
+  pub_semver: ^2.1.1
 
 dev_dependencies:
   lints: any
