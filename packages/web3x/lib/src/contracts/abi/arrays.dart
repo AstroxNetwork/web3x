@@ -6,7 +6,7 @@ import '../../utils/typed_data.dart';
 import 'integers.dart';
 import 'types.dart';
 
-/// The bytes<M> solidity type, which stores up to 32 bytes.
+/// The bytes&lt;M&rt; solidity type, which stores up to 32 bytes.
 class FixedBytes extends AbiType<Uint8List> {
   /// Constructor.
   const FixedBytes(this.length) : assert(0 <= length && length <= 32);

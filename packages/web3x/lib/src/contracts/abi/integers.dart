@@ -48,7 +48,7 @@ abstract class _IntTypeBase extends AbiType<BigInt> {
   }
 }
 
-/// The solidity uint<M> type that encodes unsigned integers.
+/// The solidity uint&lt;M&rt; type that encodes unsigned integers.
 class UintType extends _IntTypeBase {
   /// Constructor.
   const UintType({int length = 256}) : super(length);
@@ -176,7 +176,7 @@ class BoolType extends AbiType<bool> {
   }
 }
 
-/// The solidity int<M> types that encodes twos-complement integers.
+/// The solidity int&lt;M&rt; types that encodes twos-complement integers.
 class IntType extends _IntTypeBase {
   /// Constructor.
   const IntType({int length = 256}) : super(length);

@@ -250,7 +250,7 @@ class ContractFunction {
   /// 	accept a list of ints that should be in [0; 256].
   /// * strings will accept an dart string
   /// * bool will accept a dart bool
-  /// * uint<x> and int<x> will accept a dart int
+  /// * uint&lt;x&rt; and int&lt;x&rt; will accept a dart int
   ///
   /// Other types are not supported at the moment.
   Uint8List encodeCall(List<dynamic> params) {

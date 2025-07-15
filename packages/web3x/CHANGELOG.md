@@ -1,3 +1,7 @@
+## 1.0.9
+
+- Fix lints.
+
 ## 1.0.7
 
 - Roll dependencies.
