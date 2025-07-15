@@ -25,5 +25,5 @@ dependencies:
   eth_sig_util: ^0.0.9
 
 dev_dependencies:
-  test: ^1.22.0
   lints: any
+  test: ^1.22.0

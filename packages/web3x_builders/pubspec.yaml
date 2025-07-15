@@ -20,5 +20,6 @@ dependency_overrides:
   async: any
 
 dev_dependencies:
+  lints: any
   build_runner: ^2.2.1
   build_config: ^1.1.0

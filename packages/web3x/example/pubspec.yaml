@@ -11,8 +11,8 @@ dependencies:
   web_socket_channel: ^2.2.0
 
 dev_dependencies:
+  lints: any
   test: ^1.22.0
   coverage: ^1.1.0
-  lints: ^2.0.0
   build_runner: ^2.3.2
   web3x_builders: ^1.0.1
