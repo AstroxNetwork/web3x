@@ -1,3 +1,8 @@
+## 1.1.0
+
+- Upgrade `package:dart_style` v3.
+- Apply more rules to the generator.
+
 ## 1.0.1
 
 - Add an `additional` parameter for calling contract modification methods.
