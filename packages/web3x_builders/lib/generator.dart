@@ -66,11 +66,11 @@ class ContractGenerator implements Builder {
 
     final emitter = DartEmitter(
       allocator: Allocator.simplePrefixing(),
+      orderDirectives: true,
       useNullSafetySyntax: true,
     );
     final source = '''
 // Generated code, do not modify. Run `build_runner build` to re-generate!
-// @dart=2.12
 ${library.accept(emitter)}''';
 
     try {
@@ -153,6 +153,7 @@ class _ContractGeneration {
         )
         ..add(Class(_createContractClass))
         ..addAll(_additionalSpecs);
+      b.ignoreForFile.addAll(['unnecessary_parenthesis']);
     });
   }
 

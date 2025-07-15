@@ -1,5 +1,6 @@
 // Generated code, do not modify. Run `build_runner build` to re-generate!
-// @dart=2.12
+// ignore_for_file: unnecessary_parenthesis
+
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:web3x/web3x.dart' as _i1;
 
@@ -13,14 +14,7 @@ class Erc20 extends _i1.GeneratedContract {
     required _i1.EthereumAddress address,
     required _i1.Web3Client client,
     int? chainId,
-  }) : super(
-          _i1.DeployedContract(
-            _contractAbi,
-            address,
-          ),
-          client,
-          chainId,
-        );
+  }) : super(_i1.DeployedContract(_contractAbi, address), client, chainId);
 
   /// The optional [atBlock] parameter can be used to view historical data. When
   /// set, the function will be evaluated in the specified block. By default, the
@@ -32,15 +26,8 @@ class Erc20 extends _i1.GeneratedContract {
   }) async {
     final function = self.abi.functions[0];
     assert(checkSignature(function, 'dd62ed3e'));
-    final params = [
-      owner,
-      spender,
-    ];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final params = [owner, spender];
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -56,10 +43,7 @@ class Erc20 extends _i1.GeneratedContract {
   }) async {
     final function = self.abi.functions[1];
     assert(checkSignature(function, '095ea7b3'));
-    final params = [
-      spender,
-      amount,
-    ];
+    final params = [spender, amount];
     return write(
       credentials: credentials,
       base: transaction,
@@ -79,11 +63,7 @@ class Erc20 extends _i1.GeneratedContract {
     final function = self.abi.functions[2];
     assert(checkSignature(function, '70a08231'));
     final params = [account];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -94,11 +74,7 @@ class Erc20 extends _i1.GeneratedContract {
     final function = self.abi.functions[3];
     assert(checkSignature(function, '313ce567'));
     final params = [];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -109,11 +85,7 @@ class Erc20 extends _i1.GeneratedContract {
     final function = self.abi.functions[4];
     assert(checkSignature(function, '06fdde03'));
     final params = [];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as String);
   }
 
@@ -124,11 +96,7 @@ class Erc20 extends _i1.GeneratedContract {
     final function = self.abi.functions[5];
     assert(checkSignature(function, '95d89b41'));
     final params = [];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as String);
   }
 
@@ -139,11 +107,7 @@ class Erc20 extends _i1.GeneratedContract {
     final function = self.abi.functions[6];
     assert(checkSignature(function, '18160ddd'));
     final params = [];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -159,10 +123,7 @@ class Erc20 extends _i1.GeneratedContract {
   }) async {
     final function = self.abi.functions[7];
     assert(checkSignature(function, 'a9059cbb'));
-    final params = [
-      recipient,
-      amount,
-    ];
+    final params = [recipient, amount];
     return write(
       credentials: credentials,
       base: transaction,
@@ -185,11 +146,7 @@ class Erc20 extends _i1.GeneratedContract {
   }) async {
     final function = self.abi.functions[8];
     assert(checkSignature(function, '23b872dd'));
-    final params = [
-      sender,
-      recipient,
-      amount,
-    ];
+    final params = [sender, recipient, amount];
     return write(
       credentials: credentials,
       base: transaction,
@@ -212,14 +169,8 @@ class Erc20 extends _i1.GeneratedContract {
       toBlock: toBlock,
     );
     return client.events(filter).map((_i1.FilterEvent result) {
-      final decoded = event.decodeResults(
-        result.topics!,
-        result.data!,
-      );
-      return Approval(
-        decoded,
-        result,
-      );
+      final decoded = event.decodeResults(result.topics!, result.data!);
+      return Approval(decoded, result);
     });
   }
 
@@ -236,25 +187,17 @@ class Erc20 extends _i1.GeneratedContract {
       toBlock: toBlock,
     );
     return client.events(filter).map((_i1.FilterEvent result) {
-      final decoded = event.decodeResults(
-        result.topics!,
-        result.data!,
-      );
-      return Transfer(
-        decoded,
-        result,
-      );
+      final decoded = event.decodeResults(result.topics!, result.data!);
+      return Transfer(decoded, result);
     });
   }
 }
 
 class Approval {
-  Approval(
-    List<dynamic> response,
-    this.event,
-  )   : owner = (response[0] as _i1.EthereumAddress),
-        spender = (response[1] as _i1.EthereumAddress),
-        value = (response[2] as BigInt);
+  Approval(List<dynamic> response, this.event)
+    : owner = (response[0] as _i1.EthereumAddress),
+      spender = (response[1] as _i1.EthereumAddress),
+      value = (response[2] as BigInt);
 
   final _i1.EthereumAddress owner;
 
@@ -266,12 +209,10 @@ class Approval {
 }
 
 class Transfer {
-  Transfer(
-    List<dynamic> response,
-    this.event,
-  )   : from = (response[0] as _i1.EthereumAddress),
-        to = (response[1] as _i1.EthereumAddress),
-        value = (response[2] as BigInt);
+  Transfer(List<dynamic> response, this.event)
+    : from = (response[0] as _i1.EthereumAddress),
+      to = (response[1] as _i1.EthereumAddress),
+      value = (response[2] as BigInt);
 
   final _i1.EthereumAddress from;
 

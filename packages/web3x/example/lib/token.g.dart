@@ -1,5 +1,6 @@
 // Generated code, do not modify. Run `build_runner build` to re-generate!
-// @dart=2.12
+// ignore_for_file: unnecessary_parenthesis
+
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:web3x/web3x.dart' as _i1;
 
@@ -13,14 +14,7 @@ class Token extends _i1.GeneratedContract {
     required _i1.EthereumAddress address,
     required _i1.Web3Client client,
     int? chainId,
-  }) : super(
-          _i1.DeployedContract(
-            _contractAbi,
-            address,
-          ),
-          client,
-          chainId,
-        );
+  }) : super(_i1.DeployedContract(_contractAbi, address), client, chainId);
 
   /// The optional [transaction] parameter can be used to override parameters
   /// like the gas price, nonce and max gas. The `data` and `to` fields will be
@@ -34,10 +28,7 @@ class Token extends _i1.GeneratedContract {
   }) async {
     final function = self.abi.functions[1];
     assert(checkSignature(function, '90b98a11'));
-    final params = [
-      receiver,
-      amount,
-    ];
+    final params = [receiver, amount];
     return write(
       credentials: credentials,
       base: transaction,
@@ -57,11 +48,7 @@ class Token extends _i1.GeneratedContract {
     final function = self.abi.functions[2];
     assert(checkSignature(function, '7bd703e8'));
     final params = [addr];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -75,11 +62,7 @@ class Token extends _i1.GeneratedContract {
     final function = self.abi.functions[3];
     assert(checkSignature(function, 'f8b2cb4f'));
     final params = [addr];
-    final response = await read(
-      function,
-      params,
-      atBlock,
-    );
+    final response = await read(function, params, atBlock);
     return (response[0] as BigInt);
   }
 
@@ -96,25 +79,17 @@ class Token extends _i1.GeneratedContract {
       toBlock: toBlock,
     );
     return client.events(filter).map((_i1.FilterEvent result) {
-      final decoded = event.decodeResults(
-        result.topics!,
-        result.data!,
-      );
-      return Transfer(
-        decoded,
-        result,
-      );
+      final decoded = event.decodeResults(result.topics!, result.data!);
+      return Transfer(decoded, result);
     });
   }
 }
 
 class Transfer {
-  Transfer(
-    List<dynamic> response,
-    this.event,
-  )   : from = (response[0] as _i1.EthereumAddress),
-        to = (response[1] as _i1.EthereumAddress),
-        value = (response[2] as BigInt);
+  Transfer(List<dynamic> response, this.event)
+    : from = (response[0] as _i1.EthereumAddress),
+      to = (response[1] as _i1.EthereumAddress),
+      value = (response[2] as BigInt);
 
   final _i1.EthereumAddress from;
 
