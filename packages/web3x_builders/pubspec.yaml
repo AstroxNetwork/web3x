@@ -1,6 +1,6 @@
 name: web3x_builders
 description: Extension of the web3dart package that includes the dart contract generator from abi.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/AstroxNetwork
 repository: https://github.com/AstroxNetwork/web3dart
 issue_tracker: https://github.com/AstroxNetwork/web3dart/issues
@@ -14,7 +14,7 @@ dependencies:
   web3x: ^1.0.1
   built_collection: ^5.1.1
   path: ^1.8.2
-  dart_style: ^3.1.0
+  dart_style: '>=2.3.8 <4.0.0'
   pub_semver: ^2.1.1
 
 dev_dependencies:

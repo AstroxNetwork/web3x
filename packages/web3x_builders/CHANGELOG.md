@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Allow `package:dart_style` v2.3.8.
+
 ## 1.1.0
 
 - Upgrade `package:dart_style` v3.
